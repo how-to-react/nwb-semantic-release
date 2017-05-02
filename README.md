@@ -7,4 +7,6 @@ Minimum NWB repository with semantic releases.
 
 ## Recreating
 - `$ nwb new web-module nwb-semantic-release`
-- Updated `travis.yml` to use node version 7.9.0 
+- Updated `travis.yml` to use node version 7.9.0
+- Added semantic release and various packages and configuration (see package.json)
+- npm publish --access public
