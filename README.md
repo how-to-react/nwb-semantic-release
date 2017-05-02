@@ -1,16 +1,10 @@
-# nwb-semantic-release
+# NWB Semantic Release
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![Build Status](https://travis-ci.org/how-to-react/nwb-semantic-release.svg?branch=master)](https://travis-ci.org/how-to-react/nwb-semantic-release)
+[![Coverage Status](https://coveralls.io/repos/github/how-to-react/nwb-semantic-release/badge.svg?branch=master)](https://coveralls.io/github/how-to-react/nwb-semantic-release?branch=master)
 
-Describe nwb-semantic-release here.
+Minimum NWB repository with semantic releases.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+## Recreating
+- `$ nwb new web-module nwb-semantic-release`
+- Updated `travis.yml` to use node version 7.9.0 
