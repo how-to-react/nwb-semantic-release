@@ -25,6 +25,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.13.3",
     "nwb": "0.15.x",
+    "request": "^2.79.0",
     "semantic-release": "^6.3.2",
     "validate-commit-msg": "^2.12.1"
   },
