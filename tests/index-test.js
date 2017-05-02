@@ -1,9 +1,17 @@
-import expect from 'expect'
+import expect from 'expect';
 
-import message from 'src/index'
+import { mapToArray } from 'src/index';
 
-describe('Module template', () => {
-  it('displays a welcome message', () => {
-    expect(message).toContain('Welcome to nwb-semantic-release')
-  })
-})
+describe('Map to template', () => {
+  it('should create an array from a map', () => {
+    expect(mapToArray({
+      'one': { name: "something" },
+      'two': { name: "something else" },
+    }).length).toBe(2);
+    expect(mapToArray({
+      'one': { name: "something" },
+      'two': { name: "something else" },
+      'three': { name: "something else" },
+    })[2].name).toContain('something else');
+  });
+});
