@@ -19,9 +19,9 @@ script:
   - npm test
 
 after_success:
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   - npm run build
   - npm run semantic-release
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
 branches:
   except:
