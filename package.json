@@ -1,7 +1,7 @@
 {
   "name": "@how-to-react/nwb-semantic-release",
-  "version": "1.0.0",
-  "description": "Describe nwb-semantic-release here",
+  "version": "0.0.0-development",
+  "description": "NWB with semantic relase model",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -14,15 +14,44 @@
     "clean": "nwb clean-module",
     "test": "nwb test",
     "test:coverage": "nwb test --coverage",
-    "test:watch": "nwb test --server"
+    "test:watch": "nwb test --server",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "precommit": "npm test",
+    "commitmsg": "validate-commit-msg",
+    "prepush": "npm test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "nwb": "0.15.x"
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.13.3",
+    "nwb": "0.15.x",
+    "semantic-release": "^6.3.2",
+    "validate-commit-msg": "^2.12.1"
   },
   "author": "Stephen Fraser <stephen.fraser@digirati.com>",
   "homepage": "",
   "license": "MIT",
-  "repository": "https://github.com/how-to-react/nwb-semantic-release"
+  "repository": "https://github.com/how-to-react/nwb-semantic-release",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "build",
+        "ci",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100
+    }
+  }
 }

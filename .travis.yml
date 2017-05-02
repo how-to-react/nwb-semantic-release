@@ -1,20 +1,26 @@
-sudo: false
-
 language: node_js
-node_js:
-  - 7.9.0
 
 cache:
   directories:
     - node_modules
 
+notifications:
+  email: false
+
+node_js:
+  - '7'
+
 before_install:
   - npm install codecov.io coveralls
 
+before_script:
+  - npm prune
+
 after_success:
+  - npm run semantic-release
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
 branches:
-  only:
-    - master
+  except:
+    - /^v\d+\.\d+\.\d+$/
