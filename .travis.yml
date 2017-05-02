@@ -11,7 +11,7 @@ node_js:
   - '7'
 
 before_install:
-  - npm install codecov.io coveralls
+  - npm install codecov.io coveralls request
 
 before_script:
   - npm prune
