@@ -16,9 +16,10 @@ before_install:
   - npm install codecov.io coveralls request
 
 script:
-  - npm run build
+  - npm test
 
 after_success:
+  - npm run build
   - npm run semantic-release
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
